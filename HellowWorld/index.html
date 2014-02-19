@@ -1,0 +1,28 @@
+<html ng-app="helloApp">
+<head>
+</head>
+<body ng-controller="MyCtrl">
+
+	<input type="checkbox" ng-model="showHotels" />Show the list of hotels
+
+	<div>
+		<input type ="text" ng-model="location" />
+		<input type ="text" ng-model="state" />
+	</div>
+	<div >
+		{{location}} {{state}}
+	</div>
+	<div ng-show="showHotels">
+
+		<h1>Hotels</h1>
+		<div ng-repeat="hotel in hotels">{{hotel.name}}</div>
+
+	</div>
+
+	<script src='angular.js' ></script>
+	<script src='js/app.js' ></script>
+	<script src='js/mycontroller.js' ></script>
+</body>
+
+
+</html>
